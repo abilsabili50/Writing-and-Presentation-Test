@@ -47,6 +47,7 @@ touch <filename>
 ```
 
 > `touch` digunakan untuk membuat sebuah file pada directory yang sedang digunakan.
+
 > `filename` berisi nama file yang akan dibuat beserta ekstensinya.
 
 #### **- mkdir**
@@ -56,6 +57,7 @@ mkdir <dirname>
 ```
 
 > `mkdir` digunakan untuk membuat sebuah directory didalam directory yang sedang digunakan.
+
 > `dirname` berisi nama directory yang akan dibuat.
 
 #### **- cp**
@@ -65,8 +67,11 @@ cp <param1> <param2>
 ```
 
 > `cp` digunakan untuk menyalin file/directory.
+
 > `param1` berisi nama file atau nama directory.
+
 > `param2` berisi nama directory yang akan menjadi tempat salinan.
+
 > Khusus untuk menyalin directory tambahkan `-r` sebelum `param1`.
 
 #### **- mv**
@@ -76,9 +81,13 @@ mv <param1> <param2>
 ```
 
 > `mv` digunakan untuk memindahkan file.
+
 > `mv` juga bisa digunakan untuk mengubah nama file.
+
 > `param1` berisi nama file.
+
 > `param2` berisi nama directory yang akan menjadi tempat salinan.
+
 > `param2` dapat berisi nama file yang akan menjadi nama baru dari file pada `param1`.
 
 #### **- rm**
@@ -88,7 +97,9 @@ rm <param1>
 ```
 
 > `rm` digunakan untuk menghapus sebuah file/directory.
+
 > `param1` berisi nama file atau nama directory.
+
 > Khusus untuk menghapus directory tambahkan `-r` sebelum `param1`.
 
 ### Unix Command - Menampilkan Isi File
