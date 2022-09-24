@@ -137,3 +137,181 @@ cat <filename>
 ```
 
 > `filename` berisi nama file yang ingin ditampilkan isinya.
+
+## Git & Github
+
+Git adalah tools local yang sering digunakan oleh programmer sebagai versioning system untuk project yang sedang dikerjakan. Git berguna untuk melacak perubahan yang terjadi pada sebuah project dan siapa yang merubahnya sehingga mempermudah programmer dalam mengerjakan sebuah project secara tim. Terdapat banyak versi git yang berbasis cloud seperti :
+
+- Github
+- Gitlab
+- Bitbucket
+- Dst...
+
+### Instalasi Git
+
+Klik [disini](https://git-scm.com/downloads) untuk melakukan download git lalu lakukan instalasi seperti instalasi aplikasi pada umumnya.
+
+#### Setup awal
+
+Isi username dan email config sesuai dengan yang digunakan pada github agar langsung diarahkan pada proses login github.
+
+```bash
+git config --global user.name "<username>"
+git config --global user.email <email>
+```
+
+> `username` berisi username.
+>
+> `email` berisi email yang digunakan pada github.
+
+Untuk melakukan pengecekan keberhasilan instalasi dapat menggunakan command berikut :
+
+```bash
+git --version
+```
+
+Output :
+![image](https://user-images.githubusercontent.com/73186952/192096746-8dcd7083-1eea-4d44-8427-1c80d5992891.png)
+
+#### Git command
+
+- **Git init**
+
+Git init digunakan untuk menginisialisasi folder untuk dijadikan sebagai git repository. Kita bisa menggunakannya dengan command dibawah :
+
+```bash
+git init
+git init <dirname>
+```
+
+> command pertama untuk menginsialisasi folder saat ini.
+>
+> command kedua untuk membuat folder git baru dengan `dirname` berisi nama folder yang akan digunakan.
+
+- **Git status**
+
+Git status digunakan untuk melihat perubahan dari folder git kita. Contoh command :
+
+```bash
+git status
+```
+
+- **Git Add**
+
+Git add digunakan untuk memasukkan untracked file (_file baru_) kedalam staging area. Kita bisa melakukannya dengan command dibawah :
+
+```bash
+git add .
+git add <filename>
+```
+
+> command pertma digunakan untuk memasukkan seluruh untracked file ke dalam staging area.
+>
+> command kedua digunakan untuk spesifik file dengan `filename` berisi nama file yang ingin dimasukkan.
+
+- **Git commit**
+
+Git commit digunakan untuk menyimpan perubahan pada version controll system. Kita dapat melakukannya dengan command dibawah :
+
+```bash
+git commit -m "<message>"
+```
+
+> `-m` merupakan option untuk menambahkan sebuah message yang diisi pada parameter `message`.
+
+- **Git log**
+
+Git log digunakan untuk melihat riwayat perubahan yang telah disimpan sebelumnya. Kita bisa melakukannya dengan command dibawah :
+
+```bash
+git log
+git log --oneline
+```
+
+> command kedua untuk mempersingkat hasil output yang ditampilkan sehingga bisa mudah dipahami.
+
+- **Git checkout**
+
+Git checkout digunakan untuk membatalkan perubahan sebelum perubahan itu dimasukkan ke staging dan di-commit. Kita dapat melakukannya dengan command dibawah :
+
+```bash
+git checkout <filename>
+```
+
+> `filename` berisi nama file yang ingin dibatalkan perubahannya.
+>
+> git checkout juga bisa digunakan untuk pindah ke commit sebelumnya.
+
+- **Git reset**
+
+Git reset digunakan untuk membatalkan perubahan yang telah dicommit. Git reset akan menghapus commit terakhir. Kita dapat melakukannya dengan command dibawah :
+
+```bash
+git reset <filename>
+```
+
+> `filename` berisi nama file yang ingin dibatalkan perubahannya.
+>
+> Git reset juga bisa digunakan untuk membatalkan suatu
+
+- **Git revert**
+
+Git revert sama seperti git reset tetapi tanpa menghapus commit terakhir. Kita dapat melakukannya dengan command dibawah :
+
+```bash
+git revert -n <hash>
+```
+
+> `hash` berisi kode hash commit.
+
+- **Git branch**
+
+Git branch digunakan untuk membuat percabangan agar perubahan yang disimpan pada suatu cabang tidak akan menganggu line utama. Kita dapat melakukannya dengan command dibawah :
+
+```bash
+git branch <branch_name>
+```
+
+> `branch_name` berisi nama branch yang akan dibuat.
+>
+> fitur ini biasa digunakan untuk berkolaborasi.
+
+- **Git merge**
+
+Git merge digunakan untuk menggabungkan hasil percabangan ke suatu cabang lain. Kita dapat melakukannya dengan command dibawah :
+
+```bash
+git merge <branch_name>
+```
+
+> `branch_name` berisi nama branch yang ingin digabungkan ke branch saat ini.
+
+- **Git remote**
+
+Git remote digunakan untuk menjadi petunjuk ke repo yang disimpan di server lain seperti github.
+
+```bash
+git remote add origin <url>
+```
+
+> `url` berisi url dari repo yang dijadikan tujuan.
+
+- **Git clone**
+
+Git clone digunakan untuk melakukan cloning dari repo cloud ke dalam repo local.
+
+```bash
+git clone <url>
+```
+
+> `url` berisi url dari repo yang dijadikan tujuan cloning.
+
+- **Git push**
+
+Git push digunakan untuk menyimpan perubahan yang terjadi di local ke repo yang ada di server (github).
+
+```bash
+git push -u origin <branch_name>
+```
+
+> `branch_name` berisi nama branch yang ada pada repo non-local.
