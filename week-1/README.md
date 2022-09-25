@@ -1,6 +1,10 @@
 # **Writing and Presentation Test Week 1**
 
----
+List Materi :
+
+1. [Unix Command Line](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#unix-command-line)
+2. [Git & Github](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#git--github)
+3. [HTML](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#html)
 
 ## Unix Command Line
 
@@ -315,3 +319,153 @@ git push -u origin <branch_name>
 ```
 
 > `branch_name` berisi nama branch yang ada pada repo non-local.
+
+## HTML
+
+Hypertext Markup Language atau biasa disebut HTML merupakan bahasa markup yang digunakan untuk menampilkan konten pada browser. HTML bekerja sebagai kerangka dalam pembuatan website.
+
+### Prerequisite
+
+- Browser (Chrome, firefox, ms. edge)
+- Text Editor (VS Code, notepad, notepad++, dst)
+
+### Struktur Dasar HTML
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- isi content -->
+	</body>
+</html>
+```
+
+Kode diatas merupakan struktur dari kode HTML. Konten dari website akan ditempatkan didalam tag body. Terdapat beberapa tag wajib dalam membuat struktur kode HTML, antara lain :
+
+- `<html></html>`
+- `<head></head>`
+- `<body></body>`
+
+### HTML Elements
+
+#### Element penampil teks
+
+Untuk menampilkan teks kita dapat menggunakan beberapa element HTML seperti :
+
+- HTML Heading
+  HTML heading merupakan element penampil teks dengan tingkatan sebagai heading / judul. Didalam HTML heading sendiri terdapat beberapa tingkatan mulai dari `<h1>` yang paling tinggi dan `<h6>` yang paling rendah tingkatannya. Contoh kode :
+
+  ```html
+  <h1>Halo dunia</h1>
+  ```
+
+- HTML Paragraph
+  HTML paragraph merupakan element penampil teks yang berperan sebagai paragraf. Contoh kode :
+
+  ```html
+  <p>Ini paragraf</p>
+  ```
+
+- HTML Anchor
+  HTML anchor merupakan element penampil teks yang berperan sebagai hyperlink. Contoh kode :
+
+  ```html
+  <a href="https://google.com/">link menuju google</a>
+  ```
+
+#### Element penampil media
+
+- Gambar
+  ```html
+  <img src="https://bit.ly/3j6eb3B" alt="Cat" />
+  ```
+- Video
+  ```html
+  <video>
+  	<source src="https://bit.ly/3goJEfJ" type="video/mp4" />
+  </video>
+  ```
+- Suara
+  ```html
+  <audio>
+  	<source src="https://bit.ly/2EbrKA4" type="audio/mp3" />
+  </audio>
+  ```
+
+#### Element penampil tabel
+
+Untuk menampilkan tabel kita dapat menggunakan tag `<table></table>`. Didalamnya kita dapat menampilkan beberapa element.
+
+- Baris
+  Untuk menambahkan baris kita bisa menggunakan tag `<tr></tr>`.
+- Kolom
+  Untuk menambahkan kolom kita bisa menggunakan tag `<td></td>`.
+
+Sehingga, dari element-element tersebut maka akan terbentuk struktur dasar dari element tabel seperti kode berikut :
+
+```html
+<table>
+	<tr>
+		<td>Baris 1 | Kolom 1</td>
+		<td>Baris 1 | Kolom 2</td>
+	</tr>
+	<tr>
+		<td>Baris 2 | Kolom 1</td>
+		<td>Baris 2 | Kolom 2</td>
+	</tr>
+</table>
+```
+
+#### Element penampil formulir
+
+Element penampil formulir digunakan untuk menampilkan sebuah form agar user dapat mengisinya. Kita bisa membuat formulir pada HTML menggunakan tag `<form></form>`. Didalamnya terdapat banyak element untuk user dapat mengisi formulirnya, antara lain :
+
+- Input
+  Tag input memiliki banyak sekali tipe seperti :
+
+  - text, user mengisi teks,
+  - number, user mengisi angka,
+  - email, user mengisi email,
+  - dan masih banyak lagi.
+
+  Kita bisa membuat input dengan kode seperti berikut :
+
+  ```html
+  <input type="text" />
+  ```
+
+- Select
+  Tag select digunakan untuk memberikan pilihan kepada user, sehingga didalam element select terdapat element option sebagai pilihannya. Berikut contoh kodenya :
+
+  ```html
+  <select>
+  	<option value="pilihan1">pilihan1</option>
+  	<option value="pilihan2">pilihan2</option>
+  </select>
+  ```
+
+  Output :
+  <img width="71" alt="image" src="https://user-images.githubusercontent.com/73186952/192152718-a5df7d36-50d0-448e-b6ad-bbd947516696.png">
+
+- Textarea
+  Tag textarea digunakan sebagai tempat untuk user mengirimkan teks yang panjang, biasanya digunakan untuk tempat mengisi pesan. Berikut contoh kodenya :
+
+  ```html
+  <textarea></textarea>
+  ```
+
+- Tombol
+  Kita dapat membuat tombol menggunakan tag button. Berikut contoh kodenya :
+
+  ```html
+  <button>Kirim</button>
+  ```
+
+  Output :
+  ![image](https://user-images.githubusercontent.com/73186952/192156584-5a49dd9e-90af-4ea8-a27e-0cfab1c5da26.png)
