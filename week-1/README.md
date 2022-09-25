@@ -5,6 +5,8 @@ List Materi :
 1. [Unix Command Line](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#unix-command-line)
 2. [Git & Github](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#git--github)
 3. [HTML](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#html)
+4. [CSS](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#css) - going to be added
+5. [Javascript](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#javascript) - going to be added
 
 ## Unix Command Line
 
