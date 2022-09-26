@@ -5,8 +5,9 @@ List Materi :
 1. [Unix Command Line](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#unix-command-line)
 2. [Git & Github](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#git--github)
 3. [HTML](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#html)
-4. [CSS](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#css) - going to be added
-5. [Javascript](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#javascript) - going to be added
+4. [CSS](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#css)
+5. [Algorithm](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#algorithm)
+6. [Javascript](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#javascript) - going to be added
 
 ## Unix Command Line
 
@@ -292,36 +293,6 @@ git merge <branch_name>
 
 > `branch_name` berisi nama branch yang ingin digabungkan ke branch saat ini.
 
-- **Git remote**
-
-Git remote digunakan untuk menjadi petunjuk ke repo yang disimpan di server lain seperti github.
-
-```bash
-git remote add origin <url>
-```
-
-> `url` berisi url dari repo yang dijadikan tujuan.
-
-- **Git clone**
-
-Git clone digunakan untuk melakukan cloning dari repo cloud ke dalam repo local.
-
-```bash
-git clone <url>
-```
-
-> `url` berisi url dari repo yang dijadikan tujuan cloning.
-
-- **Git push**
-
-Git push digunakan untuk menyimpan perubahan yang terjadi di local ke repo yang ada di server (github).
-
-```bash
-git push -u origin <branch_name>
-```
-
-> `branch_name` berisi nama branch yang ada pada repo non-local.
-
 ## HTML
 
 Hypertext Markup Language atau biasa disebut HTML merupakan bahasa markup yang digunakan untuk menampilkan konten pada browser. HTML bekerja sebagai kerangka dalam pembuatan website.
@@ -471,3 +442,96 @@ Element penampil formulir digunakan untuk menampilkan sebuah form agar user dapa
 
   Output :
   ![image](https://user-images.githubusercontent.com/73186952/192156584-5a49dd9e-90af-4ea8-a27e-0cfab1c5da26.png)
+
+## CSS
+
+Cascading Style Sheet atau biasa disebut CSS merupakan style sheet language yang sering digunakan dalam mengatur styling pada halaman website. Oleh karena itu, CSS sering dianalogikan menjadi penampilan dari website.
+
+### Struktur CSS
+
+![image](https://user-images.githubusercontent.com/73186952/192242910-bb830f60-a41f-4fcd-a545-2bf7f9b3bf30.png)<br/>
+
+Terdapat 3 komponen penting pada struktur CSS, yaitu :
+
+1. selector, sebagai penentu element mana yang akan diberi style (dapat berupa tag element HTML, serta value dari attribute id atau class).
+
+```css
+/* menggunakan element HTML */
+h1 {
+	color: red;
+}
+/* menggunakan class selector */
+.header {
+	color: red;
+}
+/* menggunakan id selector */
+#main {
+	color: red;
+}
+/* menggunakan chaining selector */
+div#main {
+	color: red;
+}
+/* menggunakan nested selector */
+body div#main {
+	color: red;
+}
+/* menggunakan multiple selector */
+h1,
+h2 {
+	color: red;
+}
+```
+
+2. property, sebagai penentu style yang akan dibuat. Terdapat banyak property di CSS e.g. `background-color`, `text-align`, dan lain-lain.
+
+3. value, sebagai nilai dari property style nya e.g. `red` dapat menjadi value property `background-color`.
+
+### Gaya Penulisan CSS
+
+1. inline CSS, styling ditulis didalam element HTML menggunakan attribute style. E.g.
+
+```html
+<h1 style="color: red;">Halo dunia</h1>
+```
+
+2. internal CSS, styling ditulis didalam file HTML tetapi disendirikan didalam tag `<style></style>`. E.g.
+
+```html
+<style>
+	h1 {
+		color: red;
+	}
+</style>
+```
+
+3. external CSS, styling ditulis pada file terpisah dengan ekstensi file `.css`. Import file css menggunakan tag `<link>`. E.g.
+
+![image](https://user-images.githubusercontent.com/73186952/192247093-16cca182-cc15-443f-8e4d-4581c26d824e.png)
+
+Dari ketiga gaya penulisan tersebut akan menghasilkan output yang sama :<br />
+![image](https://user-images.githubusercontent.com/73186952/192247977-fc7bc623-db4e-42a3-866c-cfa6fbfdf275.png)
+
+## Algorithm
+
+Algoritma merupakan deskripsi menggunakan tahapan-tahapan yang dibutuhkan untuk menyelesaikan suatu permasalahan. Dengan algoritma yang baik, hasil produk digital dapat memiliki waktu yang cepat dalam memproses serta memori yang kecil. Berikut contoh algoritma sederhana :
+
+![image](https://user-images.githubusercontent.com/73186952/192252173-57aaf7cb-bb66-4eac-ae0a-31ec83279248.png)
+
+### Jenis-Jenis Algoritma
+
+1. Sequence, instruksi yang dijalankan secara berurutan.
+2. Selection, instruksi dijalankan jika memenuhi suatu kondisi.
+3. Iteration, instruksi yang dijalankan secara berulang jika memenuhi kondisi tertentu.
+4. Concurrent, instruksi yang dijalankan secara bersamaan.
+
+### Penyajian Algoritma
+
+1. Deskriptif, penyajian algoritma dengan deskripsi tahapan-tahapan. E.g. :
+   ![image](https://user-images.githubusercontent.com/73186952/192259417-a802b89b-73d9-492f-b8e1-ef6f83632e64.png)
+2. Flowchart, penyajian algoritma yang direpresentasikan menggunakan **bangun datar** untuk setiap proses yang dilakukan. E.g. :
+   ![image](https://user-images.githubusercontent.com/73186952/192259758-f17d8c16-b0f8-42ce-aeed-0617b1d38e76.png)
+3. Pseudocode, penyajian algoritma yang hampir menyerupai penulisan kode program. E.g. :
+   ![image](https://user-images.githubusercontent.com/73186952/192260095-9b50b865-cea8-46b2-a5f6-4e673403dd07.png)
+
+## Javascript
