@@ -527,7 +527,7 @@ Algoritma merupakan deskripsi menggunakan tahapan-tahapan yang dibutuhkan untuk 
 
 ### Penyajian Algoritma
 
-1. Deskriptif, penyajian algoritma dengan deskripsi tahapan-tahapan. E.g. :
+1. Deskriptif, penyajian algoritma dengan deskripsi tahapan-tahapan. E.g. : <br/>
    ![image](https://user-images.githubusercontent.com/73186952/192259417-a802b89b-73d9-492f-b8e1-ef6f83632e64.png)
 2. Flowchart, penyajian algoritma yang direpresentasikan menggunakan **bangun datar** untuk setiap proses yang dilakukan. E.g. :
    ![image](https://user-images.githubusercontent.com/73186952/192259758-f17d8c16-b0f8-42ce-aeed-0617b1d38e76.png)
