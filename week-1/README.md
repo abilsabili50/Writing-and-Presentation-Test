@@ -7,7 +7,7 @@
 3. [HTML](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#html)
 4. [CSS](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#css)
 5. [Algorithm](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#algorithm)
-6. [Javascript](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#javascript) - going to be added
+6. [Javascript](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-1#javascript)
 
 ## Unix Command Line
 
@@ -512,6 +512,40 @@ h2 {
 Dari ketiga gaya penulisan tersebut akan menghasilkan output yang sama :<br />
 ![image](https://user-images.githubusercontent.com/73186952/192247977-fc7bc623-db4e-42a3-866c-cfa6fbfdf275.png)
 
+### Flexbox
+
+Flexbox adalah suatu metode dalam mengatur layouting dari website. Flexbox mengusung konsep parent-child, dimana 1 container bisa memiliki banyak child. Untuk bisa menggunakan konsep flexbox kita dapat menggunakan keyword `display: flex;`.
+
+### Ordering & Orientation
+
+```css
+/* container property */
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+/* child property */
+.child {
+	order: -1;
+}
+```
+
+### Alignment
+
+```css
+/* container property */
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+/* child property */
+.child {
+	align-self: flex-start;
+}
+```
+
 ## Algorithm
 
 Algoritma merupakan deskripsi menggunakan tahapan-tahapan yang dibutuhkan untuk menyelesaikan suatu permasalahan. Dengan algoritma yang baik, hasil produk digital dapat memiliki waktu yang cepat dalam memproses serta memori yang kecil. Berikut contoh algoritma sederhana :
@@ -535,3 +569,316 @@ Algoritma merupakan deskripsi menggunakan tahapan-tahapan yang dibutuhkan untuk 
    ![image](https://user-images.githubusercontent.com/73186952/192260095-9b50b865-cea8-46b2-a5f6-4e673403dd07.png)
 
 ## Javascript
+
+Javascript merupakan bahasa pemrogramman yang digunakan sebagai logic dari sebuah website. Terdapat beberapa contoh syntax dari object window, seperti :
+
+1. alert(), untuk menampilkan notifikasi. <br />
+   ![image](https://user-images.githubusercontent.com/73186952/192417662-b6a83749-ed22-4c68-87c0-2205fe5aad6e.png)
+2. confirm(), untuk menampilkan notifikasi dengan kembalian nilai boolean. <br />
+   ![image](https://user-images.githubusercontent.com/73186952/192417741-4b1056d6-706b-4dd4-90d0-de1bed05926a.png)
+3. prompt(), untuk menampilkan notifikasi dengan kembalian string input dari user. <br />
+   ![image](https://user-images.githubusercontent.com/73186952/192417830-8e84b097-c966-4d7b-8298-9b3343afff32.png)
+4. console.log(), untuk menampilkan hasil logic kedalam web-browser console.
+
+### Gaya Penulisan Javascript
+
+1. Internal Javascript
+   Pada gaya penulisan ini, script javascript ditulis didalam file HTML dan dibungkus dengan tag `<script></script>`.
+
+   Contoh Penerapan :
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   	<head>
+   		<meta charset="UTF-8" />
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   		<title>Coba Javascript</title>
+   	</head>
+   	<body>
+   		<script>
+   			console.log("Hello World");
+   		</script>
+   	</body>
+   </html>
+   ```
+
+2. Eksternal Javascript
+   Pada gaya penulisan kali ini tetap menggunakan tag `<script></script>`, tetapi terdapat attribute src sehingga script javscript bisa disendirikan dengan ekstensi file `.js`.
+
+   Contoh Penerapan :
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   	<head>
+   		<meta charset="UTF-8" />
+   		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   		<title>Coba Javascript</title>
+   	</head>
+   	<body>
+   		<script src="script.js"></script>
+   	</body>
+   </html>
+   ```
+
+### Tipe Data
+
+Tipe data adalah sebuah klasifikasi yang diberikan untuk berbagai macam data yang digunakan. Di javascript terdapat beberapa tipe data fundamental, antara lain :
+
+- #### Tipe Data Primitif
+
+  - number, berisi angka.
+  - string, berisi teks.
+  - boolean, berisi antara 2 buah nilai yaitu `true` atau `false`.
+  - null, merepresentasikan bahwa variable tidak memiliki nilai.
+  - undefined, merepresentasikan bahwa variable belum dibuat.
+
+- #### Tipe Data Non-Primitif
+
+  - Array, berisi kumpulan nilai dari berbagai tipe data. Untuk pembuatan array digunakan keyword `[...]`.
+  - Object, sama seperti array tetapi pada pengisian nilai pada object kita harus menambahkan key / propertinya juga. Untuk pembuatan object digunakan keyword `{key: value}`.
+
+### Variable
+
+Variable adalah sebuah wadah untuk menyimpan sebuah nilai. Terdapat 3 cara dalam membuat variable, antara lain :
+
+1. var, contoh `var namaVariable = 12`
+2. let, contoh `let namaVariable = 12`
+3. const, digunakan jika isi variable bersifat constant contoh `const namaVariable = 12`
+
+### Operator
+
+Javascript memiliki beberapa macam operator antara lain :
+
+- #### Operator Aritmatika
+
+  Operator yang digunakan untuk melakukan operasi aritmatika sederhana.
+
+  ```md
+  (`+`) digunakan untuk penambahan
+  (`-`) digunakan untuk pengurangan
+  (`*`) digunakan untuk perkalian
+  (`/`) digunakan untuk pembagian
+  (`%`) digunakan untuk modulus
+  (`**`) digunakan untuk kuadrat
+  ```
+
+- #### Operator Perbandingan
+
+  Operator yang digunakan untuk melakukan perbandingan antara value.
+
+  ```md
+  (`<`) simbol dari lebih kecil dari...
+  (`>`) simbol dari lebih besar dari...
+  (`<=`) simbol dari lebih kecil atau sama dengan dari...
+  (`>=`) simbol dari lebih besar atau sama dengan dari...
+  (`==`) simbol dari sama dengan & tidak identik dari...
+  (`!=`) simbol dari tidak sama dengan & tidak identik dari...
+  (`===`) simbol dari sama dengan & identik dari...
+  (`!==`) simbol dari tidak sama dengan & identik dari...
+  ```
+
+- #### Operator Logika
+
+  Operator yang biasa digunakan untuk conditional state yang akan menghasilkan boolean `true` atau `false`.
+
+  ```md
+  (`&&`) And Operator.
+  (`||`) Or Operator.
+  (`!`) Not Operator.
+  ```
+
+<!-- ### Scope
+
+Scope adalah konsep dalam flow data variable. Untuk penentuan scope biasanya digunakan blocks atau `{ ... }`. Conditional, function, dan looping mengusung konsep scope.
+
+- #### Global Scope
+
+  merupakan salah satu sifat scope yang menjadikan suatu variable dapat diakses dimanapun dalam suatu file.
+
+  **Contoh Kode :**
+
+  ```js
+  let myName = "Abil";
+  {
+  	console.log(myName); // Abil
+  }
+  ```
+
+- #### Local Scope
+
+  Local scope merupakan sifat dari variable yang hanya bisa diakses didalam scope tersebut saja.
+
+  **Contoh Kode :**
+
+  ```js
+  {
+  	let myName = "Abil";
+  	console.log(myName); // Abil
+  }
+  console.log(myName); // Error, myName is not defined
+  ``` -->
+
+### Conditional
+
+Merupakan statement percabangan yang menggambarkan suatu kondisi. Conditional statement akan menjalankan suatu perintah apabila telah memenuhi kondisi tertentu. Conditional ada 2 statement, yaitu `if...else if...else` dan `switch...case...default`.
+
+- #### If else Statement
+
+  ```js
+  // if statement
+  if (kondisi) {
+  	aksi;
+  }
+  // if...else statement
+  if (kondisi) {
+  	aksi;
+  } else {
+  	aksi;
+  }
+  // if...else if...else statement
+  if (kondisi) {
+  	aksi;
+  } else if (kondisi) {
+  	aksi;
+  } else {
+  	aksi;
+  }
+  ```
+
+  Contoh penerapan :
+
+  ```js
+  const nilai = 3.4;
+  // if statement
+  if (nilai >= 3) {
+  	console.log("A"); // <- dieksekusi jika nilai lebih dari atau sama dengan 3
+  }
+  // if...else statement
+  if (nilai >= 3) {
+  	console.log("A"); // <- dieksekusi jika nilai lebih dari atau sama dengan 3
+  } else {
+  	console.log("B"); // <- dieksekusi jika nilai kurang dari  3
+  }
+  // if...else if...else statement
+  if (nilai >= 3) {
+  	console.log("A"); // <- dieksekusi jika nilai lebih dari atau sama dengan 3
+  } else if (nilai > 2) {
+  	console.log("B"); // <- dieksekusi jika nilai kurang dari dari 3 dan lebih dari 2
+  } else {
+  	console.log("C"); // <- dieksekusi jika nilai kurang dari atau sama dengan 2
+  }
+  ```
+
+- #### Switch...Case Statement
+
+  ```js
+  switch (ekspresi) {
+  	case value1:
+  		aksi1; // <- dieksekusi jika ekspresi bernilai value1
+  		break;
+  	case value2:
+  		aksi2; // <- dieksekusi jika ekspresi bernilai value1
+  		break;
+  	default:
+  		aksi_default; // <- dieksekusi jika nilai ekspresi sudah tidak ada di dalam case-case diatas
+  }
+  ```
+
+  Contoh penerapan :
+
+  ```js
+  const nilai = 3;
+  switch (nilai) {
+  	case 4:
+  		console.log("A");
+  		break;
+  	case 3:
+  		console.log("A-");
+  		break;
+  	case 2:
+  		console.log("B");
+  		break;
+  	default:
+  		console.log("C");
+  }
+  ```
+
+### Looping
+
+Looping adalah statement yang digunakan untuk mengulang sebuah instruksi.
+
+- #### For Loop
+
+  ```js
+  for (initialization; condition; iteration) {
+  	// statement
+  }
+  ```
+
+  Contoh penerapan :
+
+  ```js
+  for (let i = 0; i < 5; i++) {
+  	console.log(i);
+  }
+
+  // Expected Output :
+  // 0
+  // 1
+  // 2
+  // 3
+  // 4
+  ```
+
+- #### While Loop
+
+  ```js
+  while (condition) {
+  	// statement
+  }
+  ```
+
+  Contoh penerapan :
+
+  ```js
+  let i = 1;
+  while (i < 5) {
+  	console.log(i);
+  	i++;
+  }
+
+  // Expected Output :
+  // 1
+  // 2
+  // 3
+  // 4
+  ```
+
+- #### Do...While Loop
+
+  ```js
+  do {
+  	// statement
+  } while (condition);
+  ```
+
+  Contoh penerapan :
+
+  ```js
+  let i = 0;
+  do {
+  	console.log(i);
+  	i++;
+  } while (i >= 1 && i < 5);
+
+  // Expected Output :
+  // 0 <- karena sebelum dicek kondisinya angka 0 dioutputkan terlebih dahulu.
+  // 1
+  // 2
+  // 3
+  // 4
+  ```
