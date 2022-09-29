@@ -691,37 +691,6 @@ Javascript memiliki beberapa macam operator antara lain :
   (`!`) Not Operator.
   ```
 
-<!-- ### Scope
-
-Scope adalah konsep dalam flow data variable. Untuk penentuan scope biasanya digunakan blocks atau `{ ... }`. Conditional, function, dan looping mengusung konsep scope.
-
-- #### Global Scope
-
-  merupakan salah satu sifat scope yang menjadikan suatu variable dapat diakses dimanapun dalam suatu file.
-
-  **Contoh Kode :**
-
-  ```js
-  let myName = "Abil";
-  {
-  	console.log(myName); // Abil
-  }
-  ```
-
-- #### Local Scope
-
-  Local scope merupakan sifat dari variable yang hanya bisa diakses didalam scope tersebut saja.
-
-  **Contoh Kode :**
-
-  ```js
-  {
-  	let myName = "Abil";
-  	console.log(myName); // Abil
-  }
-  console.log(myName); // Error, myName is not defined
-  ``` -->
-
 ### Conditional
 
 Merupakan statement percabangan yang menggambarkan suatu kondisi. Conditional statement akan menjalankan suatu perintah apabila telah memenuhi kondisi tertentu. Conditional ada 2 statement, yaitu `if...else if...else` dan `switch...case...default`.
