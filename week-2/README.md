@@ -4,6 +4,7 @@
 
 1. [Javascript Scope](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#scope)
 2. [Javascript Function](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#function)
+2. [Javascript Error & Debugging](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#error--debugging)
 3. [Javascript DOM](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#document-object-model) - going to be added
 
 ## Scope
@@ -131,3 +132,37 @@ namaFunction(argumen1, argumen2, ..., argumen-N);
 ```
 
 > banyak argumen yang digunakan direkomendasikan sama dengan parameter yang telah didefinisikan sebelumnya.
+
+
+## Error & Debugging
+
+### Error
+
+Error di javascript sangat bermacam-macam dan semua error tersebut memiliki penyebab yang berbeda-beda. Contohnya seperti :
+
+  1. References Error, biasa muncul saat mereferensikan referensi yang tidak valid.
+
+  2. Syntax Error, biasa muncul saat terdapat kesalahan sintaks kode.
+
+  3. Type Error, biasa muncul saat pengaksesan variable yang tipe-nya tidak valid.
+
+  4. Dan masih banyak lagi yang lainnya.
+
+### Debugging
+
+Untuk menghindari adanya sebuah bug pada aplikasi biasanya developer melakukan **debugging**. Sebagai seorang developer, kemampuan debugging sangat diperlukan karena dapat memudahkan dalam mendevelop sebuah produk digital. Biasanya seorang developer melakukan debugging dengan object global berupa `console.log()` ataupun menggunakan keyword `debugger`.
+
+### Error Handling
+
+Walaupun telah dilakukan debugging oleh para developer, aplikasi tersebut tidak akan luput juga dari kesalahan. Untuk mengatasi hal tersebut dibuatlah sebuah blok program berupa `try{...}catch(...){...}`. Try-catch sering digunakan untuk mengatasi jika terjadi kesalahan yang tidak dapat dihindarkan. Berikut contoh kodenya :
+
+```js
+try {
+  console.log(var1) // akan throw error
+} catch(error){
+  console.log(error.name) // akan menampilkan error 'ReferenceError'
+  console.log(error.message) // akan menampilkan 'var1 is not defined'
+}
+```
+
+## Javascript DOM
