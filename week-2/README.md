@@ -230,7 +230,8 @@ Events merepresentasikan sebuah kejadian yang dilakukan oleh user. Ada berbagai 
 3. mouseenter,
 4. hover / mouseenter,
 5. change,
-6. dan masih banyak lagi.
+6. submit,
+7. dan masih banyak lagi.
 
 Untuk menangkapnya dapat menggunakan keyword `addEventListener`. Berikut contoh kode untuk menangkap click event :
 
@@ -244,3 +245,18 @@ button.addEventListener("click", () => {
 
 Berikut demo hasil kode diatas :
 ![demo](https://user-images.githubusercontent.com/73186952/193423505-d6be1687-c138-4d42-97e8-aa412194bdcb.gif)
+
+Selain itu, penggunaan form-submission juga didukung oleh event berupa `submit`. Hal ini memudahkan dalam pengambilan hasil input dari user untuk dikelola oleh developer. Berikut contoh dari kodenya :
+
+```js
+// dapatkan dulu element formnya
+const form = document.querySelector("form")[0];
+
+// tambahkan event listener
+form.addEventListener("submit", function (event) {
+	// cegah agar tidak refresh page
+	event.preventDefault();
+	// buat FormData object untuk parsing data dari form
+	const formData = new FormData(form);
+});
+```
