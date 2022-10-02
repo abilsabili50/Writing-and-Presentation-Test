@@ -5,7 +5,7 @@
 1. [Javascript Scope](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#scope)
 2. [Javascript Function](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#function)
 3. [Javascript Error & Debugging](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#error--debugging)
-4. [Javascript DOM](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#document-object-model) - going to be added
+4. [Javascript DOM](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-2#javascript-dom)
 
 ## Scope
 
