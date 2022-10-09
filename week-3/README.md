@@ -159,3 +159,27 @@ for(let key as avanza){
   ```
 
 ## Rekursif
+
+Rekursif merupakan sebuah fungsi yang memanggil dirinya sendiri hingga mencapai suatu kondisi tertentu. Kondisi tertentu tersebut yang akan menjadi kondisi yang menyatakan bahwa fungsi tersebut akan berhenti.
+
+Contoh gambaran rekursif :
+
+```js
+function myfunc() {
+  ...
+	myFunc();
+  ...
+}
+```
+
+Contoh penggunaan fungsi rekursif :
+
+```js
+function factorial(start) {
+	return start <= 1 ? 1 : start * factorial(start - 1);
+}
+```
+
+## Web Storage
+
+## Asynchronous
