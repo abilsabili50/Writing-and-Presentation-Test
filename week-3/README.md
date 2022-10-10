@@ -4,9 +4,9 @@
 
 1. [Javascript Array & Multidimensional Array](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#array--multidimensional-array)
 2. [Javascript Object](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#object)
-3. [Javascript Rekursif](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#rekursif) - going to be added
-4. [Javascript Web Storage](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#web-storage) - going to be added
-5. [Javascript Asynchronous](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#asynchronous) - going to be added
+3. [Javascript Rekursif](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#rekursif)
+4. [Javascript Web Storage](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#web-storage)
+5. [Javascript Asynchronous](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#asynchronous)
 
 ## Array & Multidimensional Array
 
@@ -182,4 +182,88 @@ function factorial(start) {
 
 ## Web Storage
 
+Web storage adalah sebuah metode yang sering digunakan untuk menyimpan data sementara pada sisi klien (client-side), seperti menyimpan data tema website. Terdapat beberapa macam web storage yang sering digunakan, antara lain :
+
+1. ### Cache
+   Cache adalah teknologi yang ada didalam web browser untuk menyimpan data ketika website dimuat pertama kali berupa asset (gambar, file, dll), sehingga saat website tersebut dibuka kembali akan menjadi lebih cepat.
+2. ### Cookies
+   Cookies adalah bagian kecil dari data yang dikirim oleh sebuah website pada saat website tersebut dibuka oleh pengguna. Cookies biasa digunakan untuk menyimpan informasi login, configurasi bahasa, dan lain-lain.
+3. ### Session Storage
+   Session storage adalah penyimpanan website yang memungkinkan kita untuk menyimpan data pada sisi klien (client-side) selama web browser belum ditutup atau keluar. Berikut contoh penggunaan session storage :
+   ```js
+   sessionStorage.setItem("variabel", "value"); // untuk menyimpan data pada session storage
+   sessionStorage.getItem("variabel"); // untuk mengambil data pada session storage
+   sessionStorage.removeItem("variabel"); // untuk menghapus data pada session storage
+   sessionStorage.clear(); // untuk menghapus seluruh data pada session storage
+   ```
+   > `variabel` sebagai key pada session storage
+   > `value` sebagai nilai dari suatu key pada session storage
+4. ### Local Storage
+   Local storage adalah jenis penyimpanan yang hampir sama seperti session storage, tetapi tanpa batas waktu dengan kata lain tidak akan hilang walaupun web browser ditutup atau keluar. Berikut contoh penggunaan local storage :
+   ```js
+   localStorage.setItem("variabel", "value"); // untuk menyimpan data pada local storage
+   localStorage.getItem("variabel"); // untuk mengambil data pada local storage
+   localStorage.removeItem("variabel"); // untuk menghapus data pada local storage
+   localStorage.clear(); // untuk menghapus seluruh data pada local storage
+   ```
+   > `variabel` sebagai key pada local storage
+   > `value` sebagai nilai dari suatu key pada local storage
+
 ## Asynchronous
+
+Pada dasarnya javascript adalah bahasa pemrogramman yang bersifat single-thread dan non-blocking. Single thread disini berarti hanya bisa mengeksekusi satu tugas pada satu waktu atau biasa disebut synchronous. Namun, dengan adanya non-blocking javascript memungkinkan untuk melakukan sebuah program yang asynchoronous yaitu mengeksekusi tugas lain tanpa menunggu tugas sebelumnya selesai terlebih dahulu, sehingga hal ini bisa dikatakan javascript tidak murni memiliki sifat asynchronous. Namun, javascript memanfaatkan sifatnya yang non-blocking untuk mengeksekusi program seolah-olah seperti asynchronous. Asynchronous selalu identik dengan 3 kata kunci yaitu :
+
+1. ### Callback
+
+   Callback function adalah sebuah function yang berada didalam function lain dan proses pengeksekusiannya setelah function diluarnya selesai dijalankan. Berikut contoh dari callback function :
+
+   ```js
+   setTimeout(() => {
+   	console.log("dijalankan setelah beberapa detik");
+   }, 3000);
+   ```
+
+   > parameter pertama dari function setTimeout merupakan sebuah callback
+   >
+   > parameter kedua dari function setTimeout merupakan sebuah lama delay sebelum menjalankan sebuah callbacknya.
+
+2. ### Promises
+
+   Promise adalah adalah sebuah object yang memungkinkan pengembalian nilainya dilakukan pada masa yang akan datang. Promise bisa ditangani dengan menggunakan method chaining dari object promise sendiri berupa `then()` dan `catch()`. Nilai yang dapat dikembalikan oleh object promise antara lain :
+
+   - #### Fulfilled, nilai kembalian yang akan dikembalikan jika proses pengeksekusian promise telah selesai dan berhasil.
+   - #### Pending, nilai kembalian yang akan dikembalikan jika proses pengeksekusian promise masih belum selesai.
+   - #### Rejected, nilai kembalian yang akan dikembalikan jika proses pengeksekusian promise telah selesai, tetapi gagal dilakukan.
+
+   Contoh implementasi promise :
+
+   ```js
+   function promiseFunc(param) {
+   	return new Promise((resolve, reject) => {
+   		if (!param) reject("param tidak ada");
+   		resolve(`param ${param} ada`);
+   	});
+   }
+   ```
+
+   > resolve akan masuk kedalam then.
+   >
+   > reject akan masuk kedalam catch.
+
+3. ### Async / Await
+
+   Async dan await merupakan salah satu fitur baru dari javascript yang digunakan untuk menangani hasil dari promise selain menggunakan chaining. `async` berfungsi untuk penginisialisasian bahwa didalam blok tersebut akan terdapat asynchronous proses. Sedangkan, `await` berfungsi sebagai penanda proses mana yang berjalan secara asynchronous, sehingga proses dibawahnya tidak akan dieksekusi sebelum proses asynchronousnya selesai terlebih dahulu.
+
+   Contoh implementasi `async-await` :
+
+   ```js
+   async function greeting() {
+   	let greet = await "Halo";
+   	return greet;
+   }
+
+   const greeting = async () => {
+   	let greet = await "Halo";
+   	return greet;
+   };
+   ```
