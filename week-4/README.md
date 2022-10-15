@@ -3,7 +3,7 @@
 ## List Materi :
 
 1. [Javascript Fetch](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#javascript-fetch)
-2. [Git & Github Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#git--github-lanjutan) - going to be added
+2. [Git & Github Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#git--github-lanjutan)
 3. [Responsive Web Design](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#responsive-web-design) - going to be added
 4. [Bootstrap](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#bootstrap) - going to be added
 
@@ -112,3 +112,58 @@ Pada minggu sebelumnya telah diketahui bahwa git merge berfungsi untuk menggabun
    ```bash
    git clone https://github.com/abilsabili50/Writing-and-Presentation-Test.git
    ```
+
+5. ### Github Organization
+
+   Git organization merupakan sebuah wadah yang disediakan oleh github untuk dapat melakukan kolaborasi. Untuk membuat github organization dapat dilakukan dengan cara-cara berikut :
+
+   1. Klik tombol (+) yang ada di kanan atas pada halaman github. Nanti akan muncul sebuah dropdown
+   2. Dari dropdown tersebut klik tombol new organization.
+   3. Setelah itu, pilih opsi sesuai yang ingin dibuat.
+   4. Input nama dan email organisasi.
+
+## Responsive Web Design
+
+Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membuat design yang dapat kompatibel pada seluruh jenis device (mobile - wide screen monitor).
+
+1. ### Developer Tools
+
+   Sebagai developer website kita perlu mengetahui cara penggunaan tools-tools dari setiap browser. Contohnya pada browser chrome cara pengaksesan dev toolsnya dapat menggunakan command berikut :
+
+   `Mac`
+
+   ```bash
+   cmd + opt + j
+   ```
+
+   `Windows`
+
+   ```bash
+   ctrl + shift + j
+   ```
+
+2. ### Viewport
+
+   Untuk menerapkan konsep responsive design, perlu menambahkan tag meta viewport agar mendukung perubahan design. Tag meta tersebut dapat ditambahkan di dalam tag head pada HTML.
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   	<head>
+   		<meta charset="UTF-8" />
+   		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   		<title>Document</title>
+   	</head>
+   	<body></body>
+   </html>
+   ```
+
+3. ### CSS Relative Units
+
+   Dalam penerapan konsep responsive design kita dapat menggunakan CSS relative units. Ada beberapa css relative units, antara lain :
+
+   - #### %
+   - #### Rem
+   - #### Em
+   - #### Vw
+   - #### Vh
