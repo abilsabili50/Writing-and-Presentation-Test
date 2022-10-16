@@ -232,3 +232,26 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
      > maka ukuran tinggi dari container akan 20% terhadap tinggi layar
 
 4. ### Media Query
+
+   Media query merupakan sebuah metode untuk menerapkan design dengan karakteristik berbeda-beda yang berbasis pada sesuatu. Sesuatu yang disebutkan disini dapat berupa ukuran layar maupun aksi seperti print dan lain-lain. Media query dapat digunakan untuk menjadikan design dapat mengusung konsep responsive design. Berikut contoh penggunaannya pada responsive design:
+
+   ```css
+   @media screen and (min-width: 800px) {
+   	.container {
+   		backround-color: blue;
+   	}
+   }
+
+   @media screen and (max-width: 800px) {
+   	.container {
+   		background-color: red;
+   	}
+   }
+   ```
+
+   > Background color `container` akan berwarna biru jika layar berukuran > 800px
+   >
+   > Background color `container` akan berwarna merah jika layar berukuran < 800px
+
+5. ### Flexbox
+   Flexbox
