@@ -310,3 +310,74 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
      ```
 
 6. ### Grid
+
+   Grid merupakan sebuah sistem tata letak 2 dimensi yang dimiliki oleh CSS. Grid memungkinkan kita menempatkan konten sesuai dengan yang kita inginkan.
+
+   ![image](https://user-images.githubusercontent.com/73186952/196040745-da057218-f535-491e-9d09-dca6d090a36e.png)
+   _sumber: https://css-tricks.com/snippets/css/complete-guide-grid/_
+
+   - #### Grid Container Property
+
+     Sebelum menggunakan grid, perlu diinisialisasi terlebih dahulu `display` dari konten dengan value `grid` atau `inline-grid`. Ada beberapa property pada grid container, antara lain:
+
+     1. grid-template-columns
+
+        ```css
+        .container {
+        	display: grid;
+        	grid-template-columns: 100px 100px 100px 100px;
+        }
+        ```
+
+        > kode diatas menghasilkan 4 kolom dengan ukuran `100px`
+
+     2. grid-template-rows
+
+        ```css
+        .container {
+         display: grid;
+         height: 100px
+         grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        ```
+
+        > kode diatas menghasilkan 4 baris dengan ukuran yang sama yaitu `25px`
+
+     3. justify-content
+
+        ```css
+        .container {
+        	display: grid;
+        	justify-content: space-evenly | space-between | space-around | center
+        		| start | end;
+        }
+        ```
+
+        > `justify-content` berfungsi untuk meluruskan seluruh item didalam grid-container
+
+     4. align-content
+
+        ```css
+        .container {
+        	display: grid;
+        	align-content: space-evenly | space-between | space-around | center |
+        		start | end;
+        }
+        ```
+
+        > `align-content` berfungsi untuk meluruskan seluruh item didalam grid-container secara vertikal
+
+     5. gap
+
+        ```css
+        .container {
+        	display: grid;
+        	gap: 50px | 50px 100px;
+        	column-gap: 50px;
+        	row-gap: 50px;
+        }
+        ```
+
+        > `gap` berfungsi untuk memberi ruang antar item yang ada didalam grid-container
+
+   - #### Grid Item Property
