@@ -254,4 +254,59 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
    > Background color `container` akan berwarna merah jika layar berukuran < 800px
 
 5. ### Flexbox
-   Flexbox
+
+   Flexbox memungkinkan sebuah container mengubah lebar/tinggi seluruh elemen didalamnya sesuai dengan ruang yang tersedia.
+
+   - #### Flex Container
+     Terdapat beberapa properti flex pada container, antara lain:
+     - flex-direction
+       ```css
+       display: flex;
+       flex-ditection: row | column;
+       ```
+     - flex-wrap
+       ```css
+       display: flex;
+       flex-wrap: nowrap | wrap;
+       ```
+     - justify-content
+       ```css
+       display: flex;
+       justify-content: center | flex-start | flex-end | space-around |
+       	space-between | space-evenly;
+       ```
+     - align-items
+       ```css
+       display: flex;
+       align-items: center | flex-start | flex-end | stretch | baseline;
+       ```
+     - align-content
+       ```css
+       display: flex;
+       align-content: space-between | space-around | stretch | center |
+       	flex-start | flex-end;
+       ```
+   - #### Flex Items
+     Terdapat beberapa properti flex pada item dalam sebuah flex-container, antara lain:
+     - order
+     ```css
+     order: 3;
+     ```
+     - flex-grow
+     ```css
+     flex-grow: 8;
+     ```
+     - flex-shrink
+     ```css
+     flex-shrink: 0;
+     ```
+     - flex-basis
+     ```css
+     flex-basis: 200px;
+     ```
+     - align-self
+     ```css
+     align-self: center | flex-start | flex-end;
+     ```
+
+6. ### Grid
