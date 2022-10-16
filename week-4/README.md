@@ -163,7 +163,72 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
    Dalam penerapan konsep responsive design kita dapat menggunakan CSS relative units. Ada beberapa css relative units, antara lain :
 
    - #### %
+
+     `%` relatif terhadap elemen parent-nya. Berikut contoh penggunaanya:
+
+     ```css
+     .container {
+     	width: 60%;
+     }
+     ```
+
+     > maka ukuran container akan menjadi 60% relatif terhadap body
+
    - #### Rem
+
+     `rem` relatif ukuran dari root element-nya. Berikut contoh penggunaanya:
+
+     ```css
+     html {
+     	font-size: 20px;
+     }
+     p {
+     	font-size: 2rem;
+     }
+     ```
+
+     > maka ukuran dari `p` menjadi 40px
+
    - #### Em
+
+     `em` relatif terhadap elemen parent-nya, mirip seperti `%`. Berikut contoh penggunaannya:
+
+     ```css
+     html {
+     	font-size: 20px;
+     }
+     .container {
+     	font-size: 10px;
+     }
+     .container p {
+     	font-size: 2em;
+     }
+     ```
+
+     > maka ukuran dari `p` menjadi 20px
+
    - #### Vw
+
+     `vw` seperti `%`, tetapi relatif terhadap lebar layar device. Berikut contoh penggunaanya:
+
+     ```css
+     .container {
+     	width: 80vw;
+     }
+     ```
+
+     > maka ukuran lebar dari container akan 80% terhadap lebar layar
+
    - #### Vh
+
+     `vh` mirip seperti `vw`, tetapi bukan lebay layar melainkan tinggi layar device. Berikut contoh penggunaannya:
+
+     ```css
+     .container {
+     	height: 20vh;
+     }
+     ```
+
+     > maka ukuran tinggi dari container akan 20% terhadap tinggi layar
+
+4. ### Media Query
