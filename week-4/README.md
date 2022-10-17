@@ -461,3 +461,120 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
         > `grid-area` berfungsi untuk menempatkan grid-item pada grid-template-area yang telah disediakan oleh grid-container
 
 ## Bootstrap
+
+- ### Penggunaan Bootstrap
+
+  Bootstrap merupakan salah satu dari banyaknya framework CSS. Banyak yang menggunakan bootstrap dikarenakan framework ini sangat user-friendly bagi pemula khususnya saya. Framework ini direkomendasikan jika ingin membuat web design yang sederhana dan bahkan yang lumayan kompleks pun bisa. Penggunaannya cukup mudah, dapat menggunakan cdn link maupun install package-nya juga bisa.
+
+  #### CDN Links
+
+  ***
+
+  CSS:JS
+  https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css:https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+
+  ***
+
+  Setelah include package bootstrap, untuk penggunaannya cukup mudah yaitu hanya berbasis class utility.
+
+  ```html
+  <p class="text-danger">Hello World</p>
+  ```
+
+  > `text-danger` akan merubah warna text menjadi merah
+
+  Untuk lebih lanjut dapat melihat dokumentasinya [disini](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
+
+- ### Layouting Pada Bootstrap
+
+  Untuk mengatur layouting pada bootstrap dapat menggunakan hierarki `row-col`. Berikut contoh penerapannya.
+
+  ```html
+  <div class="row">
+  	<div class="col">
+  		<p>Hello World</p>
+  	</div>
+  </div>
+  ```
+
+  Hierarki kolom pada bootstrap terdapat 12 kolom, sehingga kita bisa menambahkan lebar kolom dengan jumlah maksimal 12. Berikut contoh penerapannya.
+
+  ```html
+  <div class="row">
+  	<div class="col-4">
+  		<p>Kolom-1</p>
+  	</div>
+  	<div class="col-4">
+  		<p>Kolom-2</p>
+  	</div>
+  	<div class="col-4">
+  		<p>Kolom-3</p>
+  	</div>
+  </div>
+  ```
+
+  #### Breakpoints
+
+  | Breakpoints       | Class | Dimension |
+  | ----------------- | ----- | --------- |
+  | Small             | sm    | >= 576px  |
+  | Medium            | md    | >= 768px  |
+  | Large             | lg    | >= 992px  |
+  | Extra Large       | xl    | >= 1200px |
+  | Extra Extra Large | xxl   | >= 1400px |
+
+  > kode diatas akan menghasilkan 3 kolom dengan ukuran yang sama
+
+- ### Content Bootstrap
+
+  Beberapa content bootstrap adalah typography, images, tables, dan lain-lain.
+
+  #### Typography
+
+      ```html
+      <p class="h1">Hello World</p>
+      <p class="h3">Hello World</p>
+      <p class="h6">Hello World</p>
+      ```
+
+  #### Images
+
+      ```html
+      <img src="..." class="img-fluid" alt="...">
+      <img src="..." class="img-thumbnail" alt="...">
+      ```
+
+- ### Component Bootstrap
+
+  Ada banyak sekali component pada bootstrap seperti alert, card, badge, modal, navbar, dan lain-lain. Berikut beberapa penggunaan component-nya.
+
+  #### Alert
+
+      ```html
+      <div class="alert alert-primary" role="alert">
+         A simple primary alert—check it out!
+      </div>
+      ```
+
+      _Output_:
+      ![image](https://user-images.githubusercontent.com/73186952/196158469-64763244-eb4c-4958-a53b-651cd16fc985.png)
+
+  #### Card
+
+      ```html
+      <div class="card" style="width: 18rem;">
+         <img src="..." class="card-img-top" alt="...">
+         <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+         </div>
+      </div>
+      ```
+
+      _Output_:
+      ![image](https://user-images.githubusercontent.com/73186952/196159078-f1e02c2d-b798-417f-806a-db7d3f7aed5e.png)
+
+- ### Contoh Hasil Website Menggunakan Bootstrap
+
+  Untuk melihat kode yang telah saya buat dapat dilihat pada repo [ini](https://github.com/abilsabili50/SkilMovie).Sedangkan, Untuk contoh hasil website yang telah saya buat dapat dilihat [disini](https://movies-apps.vercel.app/).
