@@ -5,7 +5,7 @@
 1. [Javascript Fetch](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#javascript-fetch)
 2. [Git & Github Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#git--github-lanjutan)
 3. [Responsive Web Design](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#responsive-web-design)
-4. [Bootstrap](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#bootstrap) - going to be added
+4. [Bootstrap](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#bootstrap)
 
 ## Javascript Fetch
 
@@ -468,12 +468,10 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 
   #### CDN Links
 
-  ***
-
+  ---
   CSS:JS
   https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css:https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
-
-  ***
+  ---
 
   Setelah include package bootstrap, untuk penggunaannya cukup mudah yaitu hanya berbasis class utility.
 
