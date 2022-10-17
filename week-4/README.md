@@ -481,8 +481,6 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 
   > `text-danger` akan merubah warna text menjadi merah
 
-  Untuk lebih lanjut dapat melihat dokumentasinya [disini](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
-
 - ### Layouting Pada Bootstrap
 
   Untuk mengatur layouting pada bootstrap dapat menggunakan hierarki `row-col`. Berikut contoh penerapannya.
@@ -576,3 +574,5 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 - ### Contoh Hasil Website Menggunakan Bootstrap
 
   Untuk melihat kode yang telah saya buat dapat dilihat pada repo [ini](https://github.com/abilsabili50/SkilMovie).Sedangkan, Untuk contoh hasil website yang telah saya buat dapat dilihat [disini](https://movies-apps.vercel.app/).
+
+- ### Untuk lebih lanjut dapat melihat dokumentasinya [disini](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
