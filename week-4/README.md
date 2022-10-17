@@ -527,18 +527,18 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 
   #### Typography
 
-      ```html
-      <p class="h1">Hello World</p>
-      <p class="h3">Hello World</p>
-      <p class="h6">Hello World</p>
-      ```
+  ```html
+  <p class="h1">Hello World</p>
+  <p class="h3">Hello World</p>
+  <p class="h6">Hello World</p>
+  ```
 
   #### Images
 
-      ```html
-      <img src="..." class="img-fluid" alt="...">
-      <img src="..." class="img-thumbnail" alt="...">
-      ```
+  ```html
+  <img src="..." class="img-fluid" alt="..." />
+  <img src="..." class="img-thumbnail" alt="..." />
+  ```
 
 - ### Component Bootstrap
 
@@ -546,27 +546,30 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 
   #### Alert
 
-      ```html
-      <div class="alert alert-primary" role="alert">
-         A simple primary alert—check it out!
-      </div>
-      ```
+  ```html
+  <div class="alert alert-primary" role="alert">
+  	A simple primary alert—check it out!
+  </div>
+  ```
 
-      _Output_:
-      ![image](https://user-images.githubusercontent.com/73186952/196158469-64763244-eb4c-4958-a53b-651cd16fc985.png)
+  _Output_:
+  ![image](https://user-images.githubusercontent.com/73186952/196158469-64763244-eb4c-4958-a53b-651cd16fc985.png)
 
   #### Card
 
-      ```html
-      <div class="card" style="width: 18rem;">
-         <img src="..." class="card-img-top" alt="...">
-         <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-         </div>
-      </div>
-      ```
+  ```html
+  <div class="card" style="width: 18rem;">
+  	<img src="..." class="card-img-top" alt="..." />
+  	<div class="card-body">
+  		<h5 class="card-title">Card title</h5>
+  		<p class="card-text">
+  			Some quick example text to build on the card title and make up the bulk
+  			of the card's content.
+  		</p>
+  		<a href="#" class="btn btn-primary">Go somewhere</a>
+  	</div>
+  </div>
+  ```
 
       _Output_:
       ![image](https://user-images.githubusercontent.com/73186952/196159078-f1e02c2d-b798-417f-806a-db7d3f7aed5e.png)
