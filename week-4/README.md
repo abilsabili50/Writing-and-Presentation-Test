@@ -571,8 +571,8 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
   </div>
   ```
 
-      _Output_:
-      ![image](https://user-images.githubusercontent.com/73186952/196159078-f1e02c2d-b798-417f-806a-db7d3f7aed5e.png)
+  _Output_:
+  ![image](https://user-images.githubusercontent.com/73186952/196159078-f1e02c2d-b798-417f-806a-db7d3f7aed5e.png)
 
 - ### Contoh Hasil Website Menggunakan Bootstrap
 
