@@ -468,10 +468,10 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 
   #### CDN Links
 
-  ---
-  CSS:JS
-  https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css:https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
-  ---
+  | Deskripsi | URL                                                                          |
+  | --------- | ---------------------------------------------------------------------------- |
+  | CSS       | https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css      |
+  | JS        | https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js |
 
   Setelah include package bootstrap, untuk penggunaannya cukup mudah yaitu hanya berbasis class utility.
 
