@@ -4,7 +4,7 @@
 
 1. [Javascript Fetch](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#javascript-fetch)
 2. [Git & Github Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#git--github-lanjutan)
-3. [Responsive Web Design](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#responsive-web-design) - going to be added
+3. [Responsive Web Design](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#responsive-web-design)
 4. [Bootstrap](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-3#bootstrap) - going to be added
 
 ## Javascript Fetch
@@ -314,7 +314,7 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
    Grid merupakan sebuah sistem tata letak 2 dimensi yang dimiliki oleh CSS. Grid memungkinkan kita menempatkan konten sesuai dengan yang kita inginkan.
 
    ![image](https://user-images.githubusercontent.com/73186952/196040745-da057218-f535-491e-9d09-dca6d090a36e.png)
-   _sumber: https://css-tricks.com/snippets/css/complete-guide-grid/_
+   _sumber: [css-tricks](https://css-tricks.com/snippets/css/complete-guide-grid/)_
 
    - #### Grid Container Property
 
@@ -380,4 +380,84 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
 
         > `gap` berfungsi untuk memberi ruang antar item yang ada didalam grid-container
 
+     6. grid-template-area
+
+        ```css
+        .container {
+        	display: grid;
+        	grid-template-areas:
+        		"header header header header header header"
+        		"menu main main main right right"
+        		"menu footer footer footer footer footer";
+        }
+        ```
+
    - #### Grid Item Property
+
+     1. grid-column
+
+        ![image](https://user-images.githubusercontent.com/73186952/196075448-7fe92b97-c3f9-4696-a78b-9f12a5295624.png)
+
+        _sumber: [w3school](https://www.w3schools.com/css/css_grid_item.asp)_
+
+        ```css
+        .item-1 {
+        	grid-column: 1 / 5;
+        }
+        .item-2 {
+        	grid-column: 1 / span 5;
+        }
+        ```
+
+        > Panjang `item-1` akan mulai dari kolom 1 sampai sebelum kolom ke-5
+        >
+        > Panjang `item-2` akan mulai dari kolom 1 dan melebar sebanyak 5 kolom
+
+     2. grid-row
+
+        ![image](https://user-images.githubusercontent.com/73186952/196075719-478011f4-7ed3-424d-bf7d-7394fdd60409.png)
+
+        _sumber: [w3school](https://www.w3schools.com/css/css_grid_item.asp)_
+
+        ```css
+        .item-1 {
+        	grid-row: 1 / 5;
+        }
+        .item-2 {
+        	grid-row: 1 / span 5;
+        }
+        ```
+
+        > Panjang `item-1` akan mulai dari baris 1 sampai sebelum baris ke-5
+        >
+        > Panjang `item-2` akan mulai dari baris 1 dan melebar sebanyak 5 baris
+
+     3. grid-area
+
+        ```css
+        .grid-container {
+        	grid-template-areas:
+        		"header header header header header header"
+        		"menu main main main right right"
+        		"menu footer footer footer footer footer";
+        }
+        .item1 {
+        	grid-area: header;
+        }
+        .item2 {
+        	grid-area: menu;
+        }
+        .item3 {
+        	grid-area: main;
+        }
+        .item4 {
+        	grid-area: right;
+        }
+        .item5 {
+        	grid-area: footer;
+        }
+        ```
+
+        > `grid-area` berfungsi untuk menempatkan grid-item pada grid-template-area yang telah disediakan oleh grid-container
+
+## Bootstrap
