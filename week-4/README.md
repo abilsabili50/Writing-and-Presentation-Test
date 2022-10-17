@@ -509,6 +509,8 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
   </div>
   ```
 
+  > kode diatas akan menghasilkan 3 kolom dengan ukuran yang sama
+
   #### Breakpoints
 
   | Breakpoints       | Class | Dimension |
@@ -518,8 +520,6 @@ Responsive web design merupakan suatu konsep yang mengharuskan kita dalam membua
   | Large             | lg    | >= 992px  |
   | Extra Large       | xl    | >= 1200px |
   | Extra Extra Large | xxl   | >= 1400px |
-
-  > kode diatas akan menghasilkan 3 kolom dengan ukuran yang sama
 
 - ### Content Bootstrap
 
