@@ -2,10 +2,10 @@
 
 ## List Materi :
 
-1. [Web Server](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#web-server) - going to be added
-2. [RESTFul Api](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#restful-api) - going to be added
-3. [NodeJs](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#nodejs) - going to be added
-4. [ExpressJs](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#expressjs) - going to be added
+1. [Web Server](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#web-server)
+2. [RESTFul Api](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#restful-api)
+3. [NodeJs](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#nodejs)
+4. [ExpressJs](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#expressjs)
 5. [Design Database with MySQL](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#design-database-with-mysql) - going to be added
 
 ## Web Server
@@ -151,3 +151,48 @@ app.listen(3000, () => {
 ```
 
 ### Express Middleware
+
+Middleware adalah sebuah aksi yang dieksekusi sebelum request diterima langsung oleh server. Middleware biasanya digunakan untuk filtering dan security. Contohnya untuk pengecekan user yang sudah login atau belum sebelum user dapat mengakses sebuah sumber. Contoh lainnya pada saat pengecekan user yang ingin mengakses resource yang hanya bisa diakses oleh user dengan role admin.
+
+Pada express, middleware biasanya menggunakan keyword `app.use(middleware)`. Selain itu middleware juga bisa digunakan pada scope routing seperti `app.get("/", middleware, handler)`.
+
+Contoh penggunaannya seperti berikut.
+
+```js
+const express = require("express");
+const app = express();
+
+// middleware
+app.use(express.json());
+
+app.get("/", (req, res) => {
+	res.send({
+		status: "success",
+		msg: "halo dunia",
+	});
+});
+
+app.listen(3000, () => {
+	console.log("Server running on port 3000");
+});
+```
+
+### Express Routing
+
+Routing digunakan untuk mengatur endpoint yang akan dilakukan request. Dari percobaan sebelumnya, sebenarnya kita sudah implementasi routing menggunakan `app.get("/");`. Namun, express sudah menyediakan method untuk mengatur routes agar route dapat dipisahkan dengan main file. Berikut contoh implementasinya.
+
+```js
+const router = require("express").Router();
+
+router.get("/", (req, res) => {
+	res.send("halo dunia");
+});
+
+router.get("/:nama", (req, res) => {
+	res.send(`Halo ${req.params.nama}`);
+});
+
+module.exports = router;
+```
+
+## Design Database
