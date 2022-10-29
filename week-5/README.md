@@ -6,7 +6,7 @@
 2. [RESTFul Api](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#restful-api)
 3. [NodeJs](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#nodejs)
 4. [ExpressJs](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#expressjs)
-5. [Design Database with MySQL](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#design-database-with-mysql) - going to be added
+5. [Design Database](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#design-database) - going to be added
 
 ## Web Server
 
@@ -196,3 +196,65 @@ module.exports = router;
 ```
 
 ## Design Database
+
+Database adalah sekumpulan data yang disimpan dan dikelola sedemikian rupa berdasarkan ketentuan tertentu sehingga mudah dalam pengelolaannya.
+
+### Studi Kasus
+
+Membuat desain database dari orang yang menyukai film dengan genre tertentu.
+
+### Langkah Pembuatan Desain Database
+
+1.  #### Menentukan Entity
+
+Pada kasus diatas entity yang terbentuk antara lain
+
+1. Orang
+2. Film
+3. Genre
+
+Maka didapat desainnya sebagai berikut.
+
+![image](https://user-images.githubusercontent.com/73186952/198849533-5ce91fa7-cca5-4cc4-87ee-39b73f890173.png)
+
+2.  #### Menentukan Atribute dari Entity
+
+Dari entitas-entitas diatas terbentuklah atribut sebagai berikut.
+
+- Orang
+
+  1.  NIK
+  2.  nama
+  3.  jenis_kelamin
+
+- Film
+
+  1.  id_film
+  2.  judul
+  3.  tahun_rilis
+
+- Genre
+
+  1.  id_genre
+  2.  nama_genre
+
+Maka didapat desainnya sebagai berikut.
+
+![image](https://user-images.githubusercontent.com/73186952/198849548-1def3340-1eba-4566-a9f3-bb154bfed155.png)
+
+3. #### Menentukan Relasi Antar Entity
+
+Dari entitas-entitas diatas terbentuklah relasi sebagai berikut.
+
+1. Orang - Film (`many-to-many`)
+2. Film - Genre (`many-to-many`)
+
+Maka didapat ERD sebagai berikut.
+
+![image](https://user-images.githubusercontent.com/73186952/198849741-690b1d71-96ac-4a78-abc7-732489427123.png)
+
+### Hasil Desain Database
+
+Dari langkah-langkah diatas didapatlah desain database seperti berikut.
+
+![image](https://user-images.githubusercontent.com/73186952/198850087-fe6a2238-b174-44c6-9e8e-b3301f95f338.png)
