@@ -1,11 +1,11 @@
-# **Writing and Presentation Test Week 5**
+# **Writing and Presentation Test Week 6**
 
 ## List Materi :
 
-1. [MySQL Basic](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#mysql-basic)
-2. [MySQL Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#mysql-lanjutan)
-3. [Express Authentication & Authorization](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#express-authentication--authorization)
-4. [Sequelize](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#design-database)
+1. [MySQL Basic](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-6#mysql-basic)
+2. [MySQL Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-6#mysql-lanjutan)
+3. [Express Authentication & Authorization](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-6#express-authentication--authorization)
+4. [Sequelize](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-6#design-database)
 
 ## MySQL Basic
 
