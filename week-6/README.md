@@ -3,10 +3,9 @@
 ## List Materi :
 
 1. [MySQL Basic](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#mysql-basic)
-2. [MySQL Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#mysql-lanjutan) - going to be added
-3. [Express Authentication](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#express-authentication) - going to be added
-4. [Express Authorization](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#express-authorization) - going to be added
-5. [Sequelize](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#design-database) - going to be added
+2. [MySQL Lanjutan](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#mysql-lanjutan)
+3. [Express Authentication & Authorization](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#express-authentication--authorization)
+4. [Sequelize](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5#design-database)
 
 ## MySQL Basic
 
@@ -180,8 +179,136 @@
     );
    ```
 
-## Express Authentication
+## Express Authentication & Authorization
 
-## Express Authorization
+1. ### Authentication vs Authorization vs Encryption
+
+   - Authentication
+     Authentication adalah sebuah sistem verifikasi apakah kita terdaftar didalam suatu aplikasi atau tidak.
+   - Authorization
+     Authorization adalah sebuah sistem verifikasi yang memverifikasi apa saja yang bisa saya lakukan pada suatu aplikasi.
+   - Encryption
+     Encryption adalah sebuah sistem transformasi data yang menjadikan data tersebut tidak dapat dibaca kecuali kita memiliki kunci yang benar.
+
+2. ### Variasi Authentication
+
+   - Single-Factor Authentication
+     Merupakan sistem autentikasi sederhana yang hanya menggunakan salah satu tipe autentikasi saja, seperti username / password (knowledge-base)
+   - Multi-Factor Authentication
+     Merupakan sistem autentikasi yang menggunakan paling tidak 2 tipe autentikasi, seperti menggunakan username / password dan OTP.
+
+3. ### Membuat Authentication & Authorization Sederhana
+
+   ```js
+   const express = require("express");
+   const jwt = require("jsonwebtoken");
+
+   const app = express();
+
+   const user = {
+   	id: 1,
+   	email: "abil@gmail.com",
+   	password: "surabaya",
+   	role: "admin",
+   	accessToken: null,
+   };
+
+   const SECRET_KEY = "halohalohalohalhoalhalaoalahla";
+
+   app.use(express.json());
+
+   // proses autentikasi
+
+   app.get("/login", (req, res) => {
+   	const { email, password } = req.body;
+
+   	if (!email || !password)
+   		return res
+   			.status(400)
+   			.send({ status: "fail", msg: "email or password cannot be empty" });
+
+   	if (email != user.email)
+   		return res.status(404).send({ status: "fail", msg: "email not found" });
+
+   	if (password != user.password)
+   		return res
+   			.status(400)
+   			.send({ status: "fail", msg: "password incorrect" });
+
+   	const token = jwt.sign({ email, password, role }, SECRET_KEY, {
+   		expiresIn: "24h",
+   	});
+
+   	res.send({ status: "success", msg: "token has been created", token });
+   });
+
+   // proses authorization
+   // role = admin
+   app.use((req, res, next) => {
+   	const token = req.headers["x-access-token"];
+
+   	if (!token)
+   		return res.status(403).send({ status: "fail", msg: "forbidden" });
+
+   	const decoded = jwt.verify(token, SECRET_KEY);
+
+   	const { role } = decoded;
+
+   	if (role != "admin")
+   		return res.status(403).send({ status: "fail", msg: "forbidden" });
+
+   	next();
+   });
+
+   app.get("/admin", (req, res) => {
+   	res.send({ status: "success", msg: "you are an admin" });
+   });
+   ```
 
 ## Sequelize
+
+1. ### Penggunaan Sequelize ORM
+
+   - Install Sequelize CLI
+
+     ```bash
+     npm install -g sequelize-cli
+     ```
+
+   - Install Driver
+
+     ```bash
+     npm i --save sequelize mysql
+     ```
+
+   - Inisialisasi Project
+
+     ```bash
+     npx sequelize-cli init
+     ```
+
+   - Setting Database (dalam folder `config`)
+
+     ```js
+     const Sequelize = require("sequelize");
+
+     const sequelize = new Sequelize({
+     	host: "localhost",
+     	dialect: "mysql",
+     	database: "todoApp",
+     	username: "root",
+     	password: "",
+     });
+     ```
+
+   - Generate Model
+
+     ```bash
+     npx sequelize-cli model:generate --name Todo --attributes title:string, status:string
+     ```
+
+   - Migrate Model
+
+     ```bash
+     npx sequelize-cli db:migrate
+     ```
