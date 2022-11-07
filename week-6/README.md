@@ -36,56 +36,56 @@
 
     #### DDL (Data Definition Language)
 
-          Query yang biasa digunakan dalam melakukan DDL antara lain:
+         Query yang biasa digunakan dalam melakukan DDL antara lain:
 
-          1. Membuat Tabel
+         1. Membuat Tabel
 
-              ```sql
-              create table person(
-                nik int primary key not null auto_increment,
-                nama varchar(50)
-              );
-              ```
+            ```sql
+            create table person(
+               nik int primary key not null auto_increment,
+               nama varchar(50)
+            );
+            ```
 
-          2. Mengubah Struktur Tabel
+         2. Mengubah Struktur Tabel
 
-              ```sql
-              alter table person add alamat varchar(255);
-              ```
+            ```sql
+            alter table person add alamat varchar(255);
+            ```
 
-          3. Menghapus Database / Table
+         3. Menghapus Database / Table
 
-              ```sql
-              drop database person;
-              ```
+            ```sql
+            drop database person;
+            ```
 
     #### DML (Data Manipulation Language)
 
-          Query yang biasa digunakan dalam memanipulasi data antara lain:
+         Query yang biasa digunakan dalam memanipulasi data antara lain:
 
-          1. Menampilkan Data
+         1. Menampilkan Data
 
-              ```sql
-              select * from person;
-              ```
+            ```sql
+            select * from person;
+            ```
 
-          2. Menambahkan Data
+         2. Menambahkan Data
 
-              ```sql
-              insert into person ('nik', 'nama', 'alamat') values ('1234', 'Abil', 'Balongsari');
-              ```
+            ```sql
+            insert into person ('nik', 'nama', 'alamat') values ('1234', 'Abil', 'Balongsari');
+            ```
 
-          3. Mengubah Data
+         3. Mengubah Data
 
-              ```sql
-              update person set nik='1235', nama='Abilsabili', alamat='Balongsari Tandes' where nik='1234';
-              ```
+            ```sql
+            update person set nik='1235', nama='Abilsabili', alamat='Balongsari Tandes' where nik='1234';
+            ```
 
-          4. Menghapus Data
+         4. Menghapus Data
 
-              ```sql
-              delete from person where nik='1235';
-              ```
+            ```sql
+            delete from person where nik='1235';
+            ```
 
 ## MySQL Lanjutan
 
