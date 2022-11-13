@@ -17,16 +17,20 @@ Untuk mendapatkan list todo kita bisa menggunakan method `.findAll()`.
 
 ```js
 const router = require("express").Router;
-const Todos = require("../models).Todo;
+const Todos = require("../models").Todo;
 
 router.get("/", async (req, res) => {
-  try{
-    const todos = await Todos.findAll();
-    res.send({status: 'success', msg: 'todos fetched successfully', data: todos})
-  }catch(error){
-    res.status(500).send({status: 'fail', msg: error.message})
-  }
-})
+	try {
+		const todos = await Todos.findAll();
+		res.send({
+			status: "success",
+			msg: "todos fetched successfully",
+			data: todos,
+		});
+	} catch (error) {
+		res.status(500).send({ status: "fail", msg: error.message });
+	}
+});
 
 module.exports = router;
 ```
