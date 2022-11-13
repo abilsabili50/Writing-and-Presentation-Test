@@ -11,7 +11,9 @@
 
 Setelah generate model dan seedersnya maka kita bisa menggunakan ORM sequelize untuk membuat rest api.
 
-### Get All Todos
+### Build Restful API Using Sequelize
+
+#### Get All Todos
 
 Untuk mendapatkan list todo kita bisa menggunakan method `.findAll()`.
 
@@ -35,7 +37,7 @@ router.get("/", async (req, res) => {
 module.exports = router;
 ```
 
-### Get Todo
+#### Get Todo
 
 Untuk mendapatkan list todo kita bisa menggunakan method `.findOne()`.
 
@@ -60,7 +62,7 @@ router.get("/:id", async (req, res) => {
 module.exports = router;
 ```
 
-### Add Todo
+#### Add Todo
 
 Untuk mendapatkan list todo kita bisa menggunakan method `.create()`.
 
@@ -81,7 +83,7 @@ router.post("/", async (req, res) => {
 module.exports = router;
 ```
 
-### Update Todo
+#### Update Todo
 
 Untuk mendapatkan list todo kita bisa menggunakan method `.update()`.
 
@@ -103,7 +105,7 @@ router.put("/:id", async (req, res) => {
 module.exports = router;
 ```
 
-### Delete Todo
+#### Delete Todo
 
 Untuk mendapatkan list todo kita bisa menggunakan method `.destroy()`.
 
