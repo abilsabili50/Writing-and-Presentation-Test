@@ -8,3 +8,4 @@
 4. [Week 4](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-4)
 5. [Week 5](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-5)
 6. [Week 6](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-6)
+7. [Week 7](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7)
