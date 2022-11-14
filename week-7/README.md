@@ -3,9 +3,9 @@
 ## List Materi :
 
 1. [Sequelize](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#sequelize)
-2. [MongoDB](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#mongodb) - going to be added
-3. [Mongoose](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#mongoose) - going to be added
-4. [Docker](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#docker) - going to be added
+2. [MongoDB](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#mongodb)
+3. [Mongoose](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#mongoose)
+4. [Docker](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#docker)
 
 ## Sequelize
 
@@ -276,4 +276,229 @@ Jika sudah menginstall semuanya kita dapat menggunakan mongodb menggunakan mongo
 
 ## Mongoose
 
+### Membuat RESTFul API Dengan Mongoose
+
+```js
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+
+app.use(express.json());
+
+mongoose
+	.connect("mongodb://localhost:27017/users")
+	.then(() => console.log("database connected"))
+	.catch((error) => console.log(error.message));
+
+const Schema = mongoose.Schema;
+
+const users = new Schema({
+	name: String,
+	email: String,
+});
+
+const User = mongoose.model("user", users);
+
+app.get("/", async (req, res) => {
+	try {
+		const data = await User.find();
+		res.send({ status: "success", msg: "all todos found", data });
+	} catch (error) {
+		res.status(500).send({ status: "fail", msg: error.message });
+	}
+});
+
+app.get("/:id", async (req, res) => {
+	const { id } = req.params;
+
+	try {
+		const data = await User.findOne({ _id: id });
+		res.send({ status: "success", msg: "todo found", data });
+	} catch (error) {
+		res.status(500).send({ status: "fail", msg: error.message });
+	}
+});
+
+app.post("/", async (req, res) => {
+	const { name, email } = req.body;
+
+	try {
+		const user = new User({ name, email });
+		const data = await user.save();
+		res
+			.status(201)
+			.send({ status: "success", msg: "user created successfully" });
+	} catch (error) {
+		res.status(500).send({ status: "fail", msg: error.message });
+	}
+});
+
+app.put("/:id", async (req, res) => {
+	const { id } = req.params;
+	try {
+		await User.findOneAndUpdate({ _id: id }, { ...req.body });
+		res.send({ status: "success", msg: "user updated successfully" });
+	} catch (error) {
+		res.status(500).send({ status: "fail", msg: error.message });
+	}
+});
+
+app.delete("/:id", async (req, res) => {
+	const { id } = req.params;
+	try {
+		await User.deleteOne({ _id: id });
+		res.send({ status: "success", msg: "user deleted successfully" });
+	} catch (error) {
+		res.status(500).send({ status: "fail", msg: error.message });
+	}
+});
+
+app.listen(3000, () => {
+	console.log("server running on http://localhost:3000");
+});
+```
+
+### Membuat API Specification
+
+#### A. Get All Users
+
+- Method : GET
+- Endpoint : `/`
+- Header :
+  - Accept: application/json
+- Response Status Code : `200`
+- Response :
+  ```json
+  {
+  	"status": "string",
+  	"msg": "string",
+  	"data": [
+  		{
+  			"_id": "ObjectId",
+  			"name": "string",
+  			"email": "string"
+  		}
+  	]
+  }
+  ```
+
+#### B. Get User By Id
+
+- Method : GET
+- Endpoint : `/{id}`
+- Header :
+  - Accept: application/json
+- Response Status Code : `200`
+- Response :
+  ```json
+  {
+  	"status": "string",
+  	"msg": "string",
+  	"data": {
+  		"_id": "ObjectId",
+  		"name": "string",
+  		"email": "string"
+  	}
+  }
+  ```
+
+#### C. Add User
+
+- Method : POST
+- Endpoint : `/`
+- Header :
+  - Content-Type: application/json
+  - Accept: application/json
+- Body :
+  ```json
+  {
+  	"name": "string",
+  	"email": "string"
+  }
+  ```
+- Response Status Code : `201`
+- Response :
+  ```json
+  {
+  	"status": "string",
+  	"msg": "string"
+  }
+  ```
+
+#### D. Update User
+
+- Method : PUT
+- Endpoint : `/{id}`
+- Header :
+  - Content-Type: application/json
+  - Accept: application/json
+- Body :
+  ```json
+  {
+  	"name": "string",
+  	"email": "string"
+  }
+  ```
+- Response Status Code : `200`
+- Response :
+  ```json
+  {
+  	"status": "string",
+  	"msg": "string"
+  }
+  ```
+
+#### D. Update User
+
+- Method : DELETE
+- Endpoint : `/{id}`
+- Header :
+  - Accept: application/json
+- Response Status Code : `200`
+- Response :
+  ```json
+  {
+  	"status": "string",
+  	"msg": "string"
+  }
+  ```
+
 ## Docker
+
+### Container pada Docker
+
+Container berfungsi sebagai tempat menyimpan seluruh dependensi yang diperlukan oleh sebuah software tertentu agar dapat berjalan. Container ini menghindarkan user dari masalah kompatibilitas yang mungkin akan terjadi pada beberapa sistem yang berbeda.
+
+### Basic Penggunaan dari Docker
+
+- docker pull
+
+  Perintah untuk download image dari docker hub
+
+  ```bash
+  docker pull chuanwen/cowsay
+  ```
+
+- docker images
+
+  Perintah untuk menampilkan list images yang sudah terdownload
+
+  ```bash
+  docker images
+  ```
+
+- docker run
+
+  Perintah untuk menjalankan container
+
+  ```bash
+  docker run
+  ```
+
+- docker ps
+
+  Perintah untuk menampilkan list container yang sedang berjalan
+
+  ```bash
+  docker ps
+  ```
