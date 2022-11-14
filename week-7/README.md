@@ -6,6 +6,7 @@
 2. [MongoDB](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#mongodb)
 3. [Mongoose](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#mongoose)
 4. [Docker](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#docker)
+5. [Testing API with Postman](https://github.com/abilsabili50/Writing-and-Presentation-Test/tree/main/week-7#testing-api-with-postman)
 
 ## Sequelize
 
@@ -502,3 +503,19 @@ Container berfungsi sebagai tempat menyimpan seluruh dependensi yang diperlukan 
   ```bash
   docker ps
   ```
+
+## Testing API with Postman
+
+### Manfaat Postman
+
+Postman merupakan sebuah aplikasi yang berfungsi sebagai `REST-Client` untuk menguji coba `REST-API`.
+
+### Penggunaan Aplikasi Postman
+
+1. Buka aplikasi postman
+2. Buat sebuah collection
+3. Klik tanda `+` untuk membuat tab request baru
+4. Masukkan method verbs dan url API-nya
+5. Klik body dan isi body jika memerlukan data yang dikirim pada sebuah request `optional`
+6. Klik send untuk melakukan request.
+7. Hasil request akan muncul baik success maupun error.
